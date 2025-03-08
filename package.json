@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@sodiumlabs/plume-url",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "The official Plume URL wrapper",
     "license": "MIT",
     "author": "SodiumLabs",
@@ -9,7 +9,7 @@
         "build": "tsc --noEmit && tsup",
         "lint": "tsc --noEmit && prettier . --check",
         "format": "prettier . --write",
-        "test": "npm run build && vitest"
+        "test": "vitest"
     },
     "exports": {
         "require": {
