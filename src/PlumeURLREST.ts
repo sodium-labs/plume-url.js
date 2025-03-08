@@ -18,30 +18,31 @@ export default class PlumeURLREST {
         if (!path.startsWith("/")) {
             throw new Error(`Invalid path: ${path}`);
         }
+    
+        const headers = new Headers({
+            "User-Agent": `${PlumeURLREST.defaultUserAgent} ${this.options.userAgent || ""}`.trim(),
+        });
+        if (this.options.apiKey) {
+            headers.set("Authorization", this.options.apiKey);
+        }
+        if (body) {
+            headers.append("Content-Type", "application/json");
+        }
 
         const url = `${PlumeURLREST.baseURL}${path}`;
+
+        let res;
         try {
-            const headers = new Headers({
-                "User-Agent": `${PlumeURLREST.defaultUserAgent} ${this.options.userAgent || ""}`.trim(),
-            });
-
-            if (this.options.apiKey) {
-                headers.set("Authorization", this.options.apiKey);
-            }
-
-            if (body) {
-                headers.append("Content-Type", "application/json");
-            }
-
-            const res = await fetch(url, { method, headers, body: body ? JSON.stringify(body) : undefined });
-            if (!res.ok) {
-                throw new PlumeURLError(`Failed to fetch ${url}: ${res.statusText}`, undefined, res);
-            }
-
-            return res;
+            res = await fetch(url, { method, headers, body: body ? JSON.stringify(body) : undefined });
         } catch (err) {
             throw new PlumeURLError(`Failed to fetch ${url}`, { cause: err });
         }
+
+        if (!res.ok) {
+            throw new PlumeURLError(`Invalid response ${url}: ${res.statusText}`, undefined, res);
+        }
+
+        return res;
     }
 
     public async get<T = unknown>(path: string): Promise<T> {
