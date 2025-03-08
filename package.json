@@ -38,13 +38,13 @@
         "sodium",
         "sodiumlabs"
     ],
-    "homepage": "https://github.com/cbrra/plume-url.js#readme",
+    "homepage": "https://github.com/sodium-labs/plume-url.js#readme",
     "bugs": {
-        "url": "https://github.com/cbrra/plume-url.js/issues"
+        "url": "https://github.com/sodium-labs/plume-url.js/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/cbrra/plume-url.js.git"
+        "url": "git+https://github.com/sodium-labs/plume-url.js.git"
     },
     "devDependencies": {
         "@types/node": "^22.13.8",
