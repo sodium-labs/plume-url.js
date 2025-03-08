@@ -25,9 +25,9 @@ export interface URLData {
     shortenId: string;
     shorten: string;
     infoPage: string;
-    customId: string | number;
-    description: string | number;
-    expiresAt: number | number;
+    customId: string | null;
+    description: string | null;
+    expiresAt: number | null;
     expired: boolean;
     views: number;
     disabled: boolean;
