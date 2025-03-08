@@ -6,7 +6,7 @@
         <a href="https://discord.gg/8PDXWSHH7k"><img src="https://img.shields.io/discord/1336303640725553213?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
         <a href="https://www.npmjs.com/package/@sodiumlabs/plume-url"><img src="https://img.shields.io/npm/v/@sodiumlabs/plume-url.svg?maxAge=3600" alt="npm version" /></a>
         <a href="https://www.npmjs.com/package/@sodiumlabs/plume-url"><img src="https://img.shields.io/npm/dt/@sodiumlabs/plume-url.svg?maxAge=3600" alt="npm downloads" /></a>
-        <a href="https://github.com/cbrra/plume-url.js/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/cbrra/plume-url.js?logo=github&logoColor=ffffff" /></a>
+        <a href="https://github.com/sodium-labs/plume-url.js/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/sodium-labs/plume-url.js?logo=github&logoColor=ffffff" /></a>
     </p>
 </div>
 
@@ -26,7 +26,7 @@ npm install @sodiumlabs/plume-url
 - [Plume URL documentation](https://url.ptarmigan.xyz/docs)
 - [Module references](#references)
 - [Discord server](https://discord.gg/8PDXWSHH7k)
-- [GitHub](https://github.com/cbrra/plume-url.js)
+- [GitHub](https://github.com/sodium-labs/plume-url.js)
 - [npm](https://npmjs.com/package/@sodiumlabs/plume-url)
 
 # Examples
