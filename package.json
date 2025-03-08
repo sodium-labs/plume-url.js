@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@sodiumlabs/plume-url",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "The official Plume URL wrapper",
     "license": "MIT",
     "author": "SodiumLabs",
