@@ -1,0 +1,56 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@sodiumlabs/plume-url",
+    "version": "1.0.0",
+    "description": "The official Plume URL wrapper",
+    "license": "MIT",
+    "author": "SodiumLabs",
+    "scripts": {
+        "build": "tsc --noEmit && tsup",
+        "lint": "tsc --noEmit && prettier . --check",
+        "format": "prettier . --write",
+        "test": "npm run build && vitest"
+    },
+    "exports": {
+        "require": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "import": {
+            "types": "./dist/index.d.mts",
+            "default": "./dist/index.mjs"
+        }
+    },
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "api",
+        "discord",
+        "bot",
+        "plume",
+        "wrapper",
+        "plumeapi",
+        "plume-api",
+        "plumeurl",
+        "plume-url",
+        "sodium",
+        "sodiumlabs"
+    ],
+    "homepage": "https://github.com/cbrra/plume-url.js#readme",
+    "bugs": {
+        "url": "https://github.com/cbrra/plume-url.js/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cbrra/plume-url.js.git"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.8",
+        "prettier": "^3.5.2",
+        "tsup": "^8.4.0",
+        "typescript": "^5.8.2",
+        "vitest": "^3.0.7"
+    }
+}
