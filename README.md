@@ -1,6 +1,6 @@
-<div style="text-align: center;">
+<div align="center">
 <br />
-    <p style="font-size: 2.5rem; font-weight: bold;">Plume URL.js</p>
+    <h1>Plume URL.js</h1>
     <br />
     <p>
         <a href="https://discord.gg/8PDXWSHH7k"><img src="https://img.shields.io/discord/1336303640725553213?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
