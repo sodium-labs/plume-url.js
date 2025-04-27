@@ -7,7 +7,7 @@ export interface PlumeURLRESTOptions {
 }
 
 export default class PlumeURLREST {
-    public static readonly baseURL = "https://url.ptarmigan.xyz/api";
+    public static readonly baseURL = "https://url.sodiumlabs.xyz/api";
     public static readonly defaultUserAgent = `plume-url.js/${version}`;
 
     public constructor(public readonly options: PlumeURLRESTOptions = {}) {

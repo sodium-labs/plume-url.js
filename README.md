@@ -22,12 +22,13 @@ npm install @sodiumlabs/plume-url
 
 # Links
 
-- [Plume URL](https://url.ptarmigan.xyz)
-- [Plume URL documentation](https://url.ptarmigan.xyz/docs)
+- [Plume URL](https://url.sodiumlabs.xyz)
+- [Plume URL documentation](https://url.sodiumlabs.xyz/docs)
 - [Module references](#references)
 - [Discord server](https://discord.gg/8PDXWSHH7k)
 - [GitHub](https://github.com/sodium-labs/plume-url.js)
 - [npm](https://npmjs.com/package/@sodiumlabs/plume-url)
+- [Sodium Labs](https://sodiumlabs.xyz)
 
 # Examples
 
@@ -66,7 +67,7 @@ console.log(urls);
 
 # References
 
-PlumeURL class methods. <br/> You can find the types definitions on the [API documentation](https://url.ptarmigan.xyz/docs).
+PlumeURL class methods. <br/> You can find the types definitions on the [API documentation](https://url.sodiumlabs.xyz/docs).
 
 ```js
 createURL(options: CreateURLOptions): Promise<URLData>;
