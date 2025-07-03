@@ -10,15 +10,13 @@ export default class PlumeURLREST {
     public static readonly baseURL = "https://url.sodiumlabs.xyz/api";
     public static readonly defaultUserAgent = `plume-url.js/${version}`;
 
-    public constructor(public readonly options: PlumeURLRESTOptions = {}) {
-        this.options = options;
-    }
+    public constructor(public readonly options: PlumeURLRESTOptions = {}) {}
 
     public async request(method: string, path: string, body?: object): Promise<Response> {
         if (!path.startsWith("/")) {
             throw new Error(`Invalid path: ${path}`);
         }
-    
+
         const headers = new Headers({
             "User-Agent": `${PlumeURLREST.defaultUserAgent} ${this.options.userAgent || ""}`.trim(),
         });
