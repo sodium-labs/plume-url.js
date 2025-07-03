@@ -24,7 +24,7 @@ npm install @sodiumlabs/plume-url
 
 - [Plume URL](https://url.sodiumlabs.xyz)
 - [Plume URL documentation](https://url.sodiumlabs.xyz/docs)
-- [Module references](#references)
+- [Module documentation](https://docs.sodiumlabs.xyz/plume-url.js)
 - [Discord server](https://discord.gg/8PDXWSHH7k)
 - [GitHub](https://github.com/sodium-labs/plume-url.js)
 - [npm](https://npmjs.com/package/@sodiumlabs/plume-url)
@@ -65,17 +65,19 @@ const urls = await client.plumeURL.search({ limit: 5, customId: userId });
 console.log(urls);
 ```
 
-# References
+# Documentation
 
-PlumeURL class methods. <br/> You can find the types definitions on the [API documentation](https://url.sodiumlabs.xyz/docs).
+Plume URL provides two main resources for documentation:
 
-```js
-createURL(options: CreateURLOptions): Promise<URLData>;
-search({ customId, limit, page, expired }: SearchURLOptions): Promise<SearchURLResults>;
-getURL(id: string): Promise<URLData>;
-editURL(id: string, options: EditURLOptions): Promise<void>;
-deleteURL(id: string): Promise<void>;
-```
+- **API Reference:**  
+   [Plume URL Documentation](https://url.sodiumlabs.xyz/docs)  
+   This documentation covers all available endpoints, types, and detailed comments for the API.
+
+- **Module Reference:**  
+   [Module Documentation](https://docs.sodiumlabs.xyz/plume-url.js)  
+   This documentation explains how to use the `@sodiumlabs/plume-url` npm package, with all available methods and types.
+
+For most use cases, you'll want to refer to the [`PlumeURL` class page](https://docs.sodiumlabs.xyz/plume-url.js/classes/PlumeURL), which lists all available methods for interacting with the API through this module.
 
 # Help
 
