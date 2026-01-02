@@ -1,57 +1,67 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@sodiumlabs/plume-url",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "The official Plume URL wrapper",
-    "license": "MIT",
-    "author": "SodiumLabs",
-    "scripts": {
-        "build": "tsc --noEmit && tsup",
-        "lint": "tsc --noEmit && oxlint && prettier . --check",
-        "format": "prettier . --write",
-        "test": "vitest"
-    },
-    "exports": {
-        "require": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        },
-        "import": {
-            "types": "./dist/index.d.mts",
-            "default": "./dist/index.mjs"
-        }
-    },
-    "types": "./dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
     "keywords": [
         "api",
-        "discord",
         "bot",
+        "discord",
         "plume",
-        "wrapper",
-        "plumeapi",
         "plume-api",
-        "plumeurl",
         "plume-url",
+        "plumeapi",
+        "plumeurl",
         "sodium",
-        "sodiumlabs"
+        "sodiumlabs",
+        "wrapper"
     ],
     "homepage": "https://github.com/sodium-labs/plume-url.js#readme",
     "bugs": {
         "url": "https://github.com/sodium-labs/plume-url.js/issues"
     },
+    "license": "MIT",
+    "author": "sodiumlabs",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sodium-labs/plume-url.js.git"
     },
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "import": {
+                "types": "./dist/index.d.mts",
+                "default": "./dist/index.mjs"
+            }
+        }
+    },
+    "scripts": {
+        "build": "tsup",
+        "build:docs": "tsc -p tsconfig.docs.json",
+        "lint": "tsc --noEmit && oxlint && oxfmt --check",
+        "fmt": "oxfmt",
+        "test": "vitest",
+        "docs": "npm run build:docs && api-extractor run --local"
+    },
     "devDependencies": {
-        "@types/node": "^22.13.8",
-        "oxlint": "^1.5.0",
-        "prettier": "^3.5.2",
-        "tsup": "^8.4.0",
-        "typescript": "^5.8.2",
-        "vitest": "^3.0.7"
+        "@microsoft/api-extractor": "^7.55.2",
+        "@types/node": "^25.0.3",
+        "oxfmt": "^0.21.0",
+        "oxlint": "^1.36.0",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3",
+        "vitest": "^4.0.16"
+    },
+    "engines": {
+        "node": ">=18"
     }
 }
