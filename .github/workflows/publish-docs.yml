@@ -1,0 +1,57 @@
+name: Publish Docs
+
+on:
+    release:
+        types: [published]
+    workflow_dispatch:
+
+jobs:
+    publish-docs:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout source repo
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Generate docs
+              run: npm run docs
+
+            - name: Read package info
+              id: pkg
+              run: |
+                  NAME=$(jq -r '.name' package.json | sed 's/^@sodiumlabs\///')
+                  VERSION=$(jq -r '.version' package.json)
+                  echo "name=$NAME" >> $GITHUB_OUTPUT
+                  echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+            - name: Checkout artifacts repo
+              uses: actions/checkout@v4
+              with:
+                  repository: sodium-labs/artifacts
+                  ref: main
+                  token: ${{ secrets.ARTIFACTS_TOKEN }}
+                  path: artifacts
+
+            - name: Copy docs
+              run: |
+                  TARGET="artifacts/docs/packages/${{ steps.pkg.outputs.name }}/${{ steps.pkg.outputs.version }}"
+                  mkdir -p "$TARGET"
+                  cp README.md "$TARGET/"
+                  cp dist-docs/docs.api.json "$TARGET/"
+
+            - name: Commit and push
+              run: |
+                  cd artifacts
+                  git config user.name "github-actions"
+                  git config user.email "github-actions@github.com"
+                  git add .
+                  git commit -m "docs: ${{ steps.pkg.outputs.name }}@${{ steps.pkg.outputs.version }}" || exit 0
+                  git push

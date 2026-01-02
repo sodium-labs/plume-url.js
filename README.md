@@ -12,7 +12,7 @@
 
 # About
 
-`@sodiumlabs/plume-url` is a module that allows you to easily use Plume URL.
+`@sodiumlabs/plume-url` is a module that allows you to easily use Plume URL. See the [module docs](https://docs.sodiumlabs.xyz/docs/packages/plume-url/stable), and the [API docs](https://url.sodiumlabs.xyz/docs) to understand how to use it.
 
 # Installation
 
@@ -24,7 +24,7 @@ npm install @sodiumlabs/plume-url
 
 - [Plume URL](https://url.sodiumlabs.xyz)
 - [Plume URL documentation](https://url.sodiumlabs.xyz/docs)
-- [Module documentation](https://docs.sodiumlabs.xyz/plume-url.js)
+- [Module documentation](https://docs.sodiumlabs.xyz/docs/packages/plume-url/stable)
 - [Discord server](https://discord.gg/8PDXWSHH7k)
 - [GitHub](https://github.com/sodium-labs/plume-url.js)
 - [npm](https://npmjs.com/package/@sodiumlabs/plume-url)
@@ -74,10 +74,10 @@ Plume URL provides two main resources for documentation:
    This documentation covers all available endpoints, types, and detailed comments for the API.
 
 - **Module Reference:**  
-   [Module Documentation](https://docs.sodiumlabs.xyz/plume-url.js)  
+   [Module Documentation](https://docs.sodiumlabs.xyz/docs/packages/plume-url/stable)  
    This documentation explains how to use the `@sodiumlabs/plume-url` npm package, with all available methods and types.
 
-For most use cases, you'll want to refer to the [`PlumeURL` class page](https://docs.sodiumlabs.xyz/plume-url.js/classes/PlumeURL), which lists all available methods for interacting with the API through this module.
+For most use cases, you'll want to refer to the [`PlumeURL` class page](https://docs.sodiumlabs.xyz/docs/packages/plume-url/stable/PlumeURL:Class), which lists all available methods for interacting with the API through this module.
 
 # Help
 
