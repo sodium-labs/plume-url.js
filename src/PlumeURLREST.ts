@@ -1,14 +1,16 @@
 import PlumeURLError from "./PlumeURLError";
-import { version } from "@/../package.json";
 
 export interface PlumeURLRESTOptions {
+    /**
+     * The API key to use.
+     */
     apiKey?: string;
     userAgent?: string;
 }
 
 export default class PlumeURLREST {
-    public static readonly baseURL = "https://url.sodiumlabs.xyz/api";
-    public static readonly defaultUserAgent = `plume-url.js/${version}`;
+    public static readonly baseURL: string = "https://url.sodiumlabs.xyz/api";
+    public static readonly defaultUserAgent: string = "plume-url.js";
 
     public constructor(public readonly options: PlumeURLRESTOptions = {}) {}
 

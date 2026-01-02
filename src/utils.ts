@@ -1,3 +1,6 @@
+/**
+ * Encode a search params string.
+ */
 export const queryfy = (options: Record<string, unknown>): string => {
     const params = new URLSearchParams(
         Object.entries(options)
